@@ -20,21 +20,21 @@
 #'
 catNumeroComplet <- function(countryCode, tonNumero, Langue){
   paste(if (is.null(countryCode)) {
-    languageInput()[16]
+    paysdf[[Langue]][16]
   } else if (stringr::str_detect(countryCode, "^\\+") == T) {
     if (comparaisonChiffres(substring(countryCode, 2))) {
       countryCode
     } else {
-      languageInput()[16]
+      paysdf[[Langue]][16]
     }
   } else if (comparaisonChiffres(countryCode)) {
     paste0("+", countryCode)
   } else {
-    languageInput()[16]
+    paysdf[[Langue]][16]
   },
   if (is.null(tonNumero) ||
       !comparaisonChiffres(tonNumero)) {
-    languageInput()[16]
+    paysdf[[Langue]][16]
   } else {
     if (stringr::str_count(tonNumero, "[0123456789]") == 10) {
       if (Langue == "France") {
@@ -43,7 +43,7 @@ catNumeroComplet <- function(countryCode, tonNumero, Langue){
         numeroAmericain(tonNumero)
       }
     } else {
-      languageInput()[15]
+      paysdf[[Langue]][15]
     }
   })
 }
