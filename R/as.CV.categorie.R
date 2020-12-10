@@ -16,7 +16,7 @@ as.CV.categorie <- function(dataTxt, pays) {
   #if(is.null(dataTxt)){return(null)}
   data <- dataTxt %>%
     tidyr::separate(1, c("type", names(dataTxt)[1]), sep = ":") %>%
-    tidyr::separate(2, c(names(dataTxt)[1], message["level", input$Langue]), sep = paste0(", ", message["level", input$Langue]))
+    tidyr::separate(2, c(names(dataTxt)[1], message["level", pays]), sep = paste0(", ", message["level", pays]))
   data[, 3] <- as.numeric(data[, 3])
   class(data) <-
     append(class(data), ifelse(pays == "France", "CV.FR", "CV.US"))
