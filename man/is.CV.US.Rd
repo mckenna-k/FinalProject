@@ -7,8 +7,8 @@
 is.CV.US(obj)
 }
 \arguments{
-\item{obj}{unknown}
+\item{obj}{Un CV qui est cense etre un CV facon americain}
 }
 \description{
-unknown
+affiche "CV.US" si obj est un CV suivant la facon Americain
 }

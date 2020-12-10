@@ -7,8 +7,8 @@
 is.CV.FR(obj)
 }
 \arguments{
-\item{obj}{sais pas}
+\item{obj}{Un CV qui est cense etre un CV facon francais}
 }
 \description{
-A faire
+affiche "CV.FR" si obj est un CV suivant la facon Francais
 }
