@@ -16,7 +16,7 @@ catMailComplet prend les valeurs et test pour voir si il y a une arobase.
 Si il n'y a pas de arobase, il renvoit une message d'erreur
 }
 \examples{
-catNomComplet("McKenna.kevin.gmail.com","France")
+catMailComplet("McKenna.kevin.gmail.com","France")
 [1] Erreur: pas une format propre pour un mail
 
 }

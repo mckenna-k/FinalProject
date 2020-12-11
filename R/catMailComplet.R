@@ -11,7 +11,7 @@
 #' Si il n'y a pas de arobase, il renvoit une message d'erreur
 #'
 #' @examples
-#' catNomComplet("McKenna.kevin.gmail.com","France")
+#' catMailComplet("McKenna.kevin.gmail.com","France")
 #' [1] Erreur: pas une format propre pour un mail
 #'
 catMailComplet <- function(mail, langue){
