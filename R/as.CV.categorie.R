@@ -14,12 +14,12 @@ as.CV.categorie <- function(dataTxt, pays) {
     dataTxt <- dataTxt()
   }
   #if(is.null(dataTxt)){return(null)}
-  data <- dataTxt %>%
+  results <- dataTxt %>%
     tidyr::separate(1, c("type", names(dataTxt)[1]), sep = ":") %>%
-    tidyr::separate(2, c(names(dataTxt)[1], message["level", input$Langue]), sep = paste0(", ", message["level", input$Langue]))
-  data[, 3] <- as.numeric(data[, 3])
-  class(data) <-
-    append(class(data), ifelse(pays == "France", "CV.FR", "CV.US"))
-  return(data)
+    tidyr::separate(2, c(names(dataTxt)[1], KBFpackage::message["level", pays]), sep = paste0(", ", KBFpackage::message["level", pays]))
+  results[, 3] <- as.numeric(results[, 3])
+  class(results) <-
+   append(class(results), ifelse(pays == "France", "CV.FR", "CV.US"))
+  return(results)
 
 }
