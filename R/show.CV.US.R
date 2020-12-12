@@ -1,9 +1,9 @@
 #' show.CV.US
 #'
 #' @param obj
-#' unknown
+#' Un dataframe d'objets a afficher
 #' @param option
-#' unknown
+#' l'option du graphique a sortir
 #'
 #' @description
 #' affiche le CV facon US
@@ -21,7 +21,7 @@ show.CV.US <- function(obj, option = 1) {
       booktabs = T,
       linesep = " "
     ) %>%
-      kable_styling(latex_options = c("striped", "HOLD_position"))
+      kableExtra::kable_styling(latex_options = c("striped", "HOLD_position"))
   } else{
     knitr::kable(
       head(obj[, 1:2], n = dim(obj)[1]),
@@ -30,6 +30,6 @@ show.CV.US <- function(obj, option = 1) {
       booktabs = T,
       linesep = " "
     ) %>%
-      kable_styling(latex_options = c("striped", "HOLD_position"))
+      kableExtra::kable_styling(latex_options = c("striped", "HOLD_position"))
   }
 }

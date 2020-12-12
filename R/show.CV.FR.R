@@ -1,9 +1,9 @@
 #' show.CV.FR
 #'
 #' @param obj
-#' unknown
+#' Un dataframe d'objets a afficher
 #' @param option
-#' unknown
+#' l'option du graphique a sortir
 #'
 #' @description
 #' Affiche un CV facon Francais
@@ -12,6 +12,7 @@
 #'
 #'
 show.CV.FR <- function(obj, option = 1) {
+  M <- 10
   if (dim(obj[is.na(obj[, 3]) == FALSE, ])[1] < 3) {
     if (FALSE %in% is.na(obj[, 3])) {
       knitr::kable(
@@ -21,7 +22,7 @@ show.CV.FR <- function(obj, option = 1) {
         booktabs = T,
         linesep = " "
       ) %>%
-        kable_styling(latex_options = c("striped", "HOLD_position"))
+        kableExtra::kable_styling(latex_options = c("striped", "HOLD_position"))
     } else{
       knitr::kable(
         head(obj[, 1:2], n = dim(obj)[1]),
@@ -30,7 +31,7 @@ show.CV.FR <- function(obj, option = 1) {
         booktabs = T,
         linesep = " "
       ) %>%
-        kable_styling(latex_options = c("striped", "HOLD_position"))
+        kableExtra::kable_styling(latex_options = c("striped", "HOLD_position"))
     }
   } else {
     # information graphique
@@ -50,7 +51,7 @@ show.CV.FR <- function(obj, option = 1) {
            },
            {
              #barplot
-             ggplot(data = obj[is.na(obj[, 3]) == FALSE, ], aes(
+             ggplot2::ggplot(data = obj[is.na(obj[, 3]) == FALSE, ], aes(
                x = obj[is.na(obj[, 3]) == FALSE, ][, 2],
                y = obj[is.na(obj[, 3]) == FALSE, ][, 3],
                fill = obj[is.na(obj[, 3]) == FALSE, ][, 3]
@@ -69,7 +70,7 @@ show.CV.FR <- function(obj, option = 1) {
              obj$prop <- obj[, 3] / sum(obj[, 3]) * 100
              obj$ypos <- cumsum(obj$prop) - 0.5 * obj$prop
              #plot
-             ggplot(data = obj, aes(
+             ggplot2::ggplot(data = obj, aes(
                x = "",
                y = prop,
                fill = rev(factor(obj[, 2], levels = obj[, 2]))
@@ -98,7 +99,7 @@ show.CV.FR <- function(obj, option = 1) {
         linesep = " ",
         row.names = FALSE
       ) %>%
-        kable_styling(latex_options = c("striped", "HOLD_position"))
+        kableExtra::kable_styling(latex_options = c("striped", "HOLD_position"))
     }
   }
 }

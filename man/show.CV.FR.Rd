@@ -7,9 +7,9 @@
 \method{show}{CV.FR}(obj, option = 1)
 }
 \arguments{
-\item{obj}{unknown}
+\item{obj}{Un dataframe d'objets a afficher}
 
-\item{option}{unknown}
+\item{option}{l'option du graphique a sortir}
 }
 \description{
 Affiche un CV facon Francais
