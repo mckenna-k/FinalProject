@@ -1,7 +1,7 @@
 #' show.CV.FR
 #'
 #' @param obj
-#' Un dataframe d'objets a afficher
+#' Un dataframe d'objets a afficher (doit etre quelque chose du classe CV.FR)
 #' @param option
 #' l'option du graphique a sortir
 #'

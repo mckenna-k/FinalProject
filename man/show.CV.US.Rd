@@ -7,7 +7,7 @@
 \method{show}{CV.US}(obj, option = 1)
 }
 \arguments{
-\item{obj}{Un dataframe d'objets a afficher}
+\item{obj}{Un dataframe d'objets a afficher (doit etre quelque chose du classe CV.US)}
 
 \item{option}{l'option du graphique a sortir}
 }

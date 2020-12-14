@@ -30,7 +30,7 @@
 #' }
 "message"
 
-#' Donnees pour les differents categories de Fanny
+#' Donnees pour les differents categories de Fanny et Billy
 #'
 #' Un dataframe qui contient les categories qui peut etre choisi
 #' @format Un dataframe avec 5 lines et 2 variables:
@@ -49,3 +49,43 @@
 #'      \item{USA}{l'option de USA}
 #' }
 "country"
+
+#' Donnees pour l'education de Billy
+#'
+#' Un dataframe avec les donnes pour les labels des sous requetes de Education
+#' @format Un dataframe avec 3 lignes et 2 variables
+#' \describe{
+#'      \item{France}{l'option de France}
+#'      \item{USA}{l'option de USA}
+#' }
+"edu"
+
+#' Donnees pour l'objectif de Billy
+#'
+#' Un dataframe avec les donnees pour les labels de l'objectif
+#' @format Un vector avec 1 lignes et 2 variables
+#' \describe{
+#'      \item{France}{l'option de France}
+#'      \item{USA}{l'option de USA}
+#' }
+"goal"
+
+#' Donnes pour le sous requete d'objectif de Billy
+#'
+#' Un dataframe avec les donnees pour les labels du sous requete de l'objectif
+#' @format Un vector avec 1 lignes et 2 variables
+#' \describe{
+#'      \item{France}{l'option de France}
+#'      \item{USA}{l'option de USA}
+#' }
+"messageObj"
+
+#' Donnees pour l'experience Pro de Billy
+#'
+#' Un dataframe avec les donnes pour les labels des sous requetes de Experience Professionel
+#' @format Un vector avec 3 lignes et 2 variables
+#' \describe{
+#'      \item{France}{l'option de France}
+#'      \item{USA}{l'option de USA}
+#' }
+"work"

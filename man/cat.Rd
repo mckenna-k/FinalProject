@@ -3,7 +3,7 @@
 \docType{data}
 \name{cat}
 \alias{cat}
-\title{Donnees pour les differents categories de Fanny}
+\title{Donnees pour les differents categories de Fanny et Billy}
 \format{
 Un dataframe avec 5 lines et 2 variables:
 \describe{
